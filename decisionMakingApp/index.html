@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Decision making app</title>
-    <h1>Get the answer to your question right now</h1>
-    <div>
-      <label for="question"
-        >Put your question here
-        <input type="text" id="question" />
-      </label>
-    </div>
-    <button onclick="decision()">Get the answer</button>
-    <p id="decisionStatements">Your answer is:</p>
   </head>
+
   <body>
+    <div class="container">
+      <header>
+        <h1>Are you in a troubl?</h1>
+        <h3>Here you will find the decision</h3>
+      </header>
+      <section class="input-section">
+        <div>
+          <input
+            type="text"
+            id="question"
+            placeholder="Put your question"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <button type="button" id="eventButton">Get the answer</button>
+        </div>
+
+        <p id="decisionStatements">Answer</p>
+      </section>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
