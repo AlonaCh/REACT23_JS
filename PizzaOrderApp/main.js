@@ -1,3 +1,8 @@
+// Welcome part
+
+
+
+// Used .eventListener method and .querySelector to define a price depending on the pizza size
 let priceTwo = 7;
 let priceFour = 10;
 let priceSix = 12;

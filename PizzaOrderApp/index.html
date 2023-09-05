@@ -3,24 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Pizza order application</title>
   </head>
   <body>
-    <h1>Home pizza house</h1>
-    <h2>Your favorite pizza is here</h2>
-    <img src="pizzaImage.jpg" alt="Pizza" />
-    <h3>Choose a size</h3>
-    <form>
-      <input type="radio" name="pizza_size" id="two" />
-      <label for="two">Two servings</label>
-      <input type="radio" name="pizza_size" id="four" />
-      <label for="two">Four servings</label>
-      <input type="radio" name="pizza_size" id="six" />
-      <label for="two">Six servings</label>
-      <input type="radio" name="pizza_size" id="eight" />
-      <label for="two">Eight servings</label>
-    </form>
-    <p id="showPrice">Get the price</p>
+    <div class="container">
+      <header>
+        <h1>Home pizza house</h1>
+        <h2>Your favorite pizza is here</h2>
+      </header>
+      <div>
+        <label for="name"></label>
+        <input type="text" id="name" placeholder="What is your name?" />
+        <input type="submit" value="Submit" />
+      </div>
+      <div class="welcomeText">
+        <p></p>
+      </div>
+      <img src="pizzaImage.jpg" alt="Pizza" class="imageOne" />
+      <h3>Choose a size</h3>
+      <form>
+        <input type="radio" name="pizza_size" id="two" />
+        <label for="two">Two servings</label>
+        <input type="radio" name="pizza_size" id="four" />
+        <label for="two">Four servings</label>
+        <input type="radio" name="pizza_size" id="six" />
+        <label for="two">Six servings</label>
+        <input type="radio" name="pizza_size" id="eight" />
+        <label for="two">Eight servings</label>
+      </form>
+      <p id="showPrice">Get the price</p>
+    </div>
+    <div class="toppings">
+      <h2>Do you want to add anything?</h2>
+      <div class="option">
+        <input type="checkbox" name="option1" id="option1" />
+        <label for="option1">beef +1,00 €</label><br />
+        <input type="checkbox" name="option2" id="option2" />
+        <label for="option2">beef +1,00 €</label><br />
+        <input type="checkbox" name="option3" id="option3" />
+        <label for="option3">beef +1,00 €</label><br />
+        <input type="checkbox" name="option4" id="option4" />
+        <label for="option4">beef +1,00 €</label><br />
+        <input type="checkbox" name="option5" id="option5" />
+        <label for="option5">beef +1,00 €</label><br />
+        <input type="checkbox" name="option6" id="option6" />
+        <label for="option6">beef +1,00 €</label><br />
+        <input type="checkbox" name="option7" id="option7" />
+        <label for="option7">beef +1,00 €</label><br />
+        <input type="checkbox" name="option8" id="option8" />
+        <label for="option8">beef +1,00 €</label><br />
+        <input type="checkbox" name="option9" id="option9" />
+        <label for="option9">beef +1,00 €</label><br />
+        <input type="checkbox" name="option10" id="option10" />
+        <label for="option10">beef +1,00 €</label><br />
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
