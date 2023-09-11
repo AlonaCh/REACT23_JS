@@ -12,6 +12,8 @@
         <h1>Home pizza house</h1>
         <h2>Your favorite pizza is here</h2>
       </header>
+
+      <!--Name of the customer-->
       <div>
         <label for="name"></label>
         <input type="text" id="name" placeholder="What is your name?" />
@@ -20,43 +22,113 @@
       <div class="welcomeText">
         <p></p>
       </div>
-      <img src="pizzaImage.jpg" alt="Pizza" class="imageOne" />
+
+      <img src="pizzaImag.jpg" alt="Pizza" class="imageOne" />
+
+      <!--Pizza size-->
       <h3>Choose a size</h3>
       <form>
-        <input type="radio" name="pizza_size" id="two" />
+        <input
+          type="radio"
+          name="pizza_size"
+          id="two"
+          value="twoServings"
+          class="pizzaSize"
+        />
         <label for="two">Two servings</label>
-        <input type="radio" name="pizza_size" id="four" />
-        <label for="two">Four servings</label>
-        <input type="radio" name="pizza_size" id="six" />
-        <label for="two">Six servings</label>
-        <input type="radio" name="pizza_size" id="eight" />
-        <label for="two">Eight servings</label>
+        <input
+          type="radio"
+          name="pizza_size"
+          id="four"
+          value="fourServings"
+          class="pizzaSize"
+        />
+        <label for="four">Four servings</label>
+        <input
+          type="radio"
+          name="pizza_size"
+          id="six"
+          value="sixServings"
+          class="pizzaSize"
+        />
+        <label for="six">Six servings</label>
+        <input
+          type="radio"
+          name="pizza_size"
+          id="eight"
+          value="eightServings"
+          class="pizzaSize"
+        />
+        <label for="eight">Eight servings</label>
       </form>
+
+      <!--Price-->
       <p id="showPrice">Get the price</p>
-    </div>
-    <div class="toppings">
+
+      <!--Toppings-->
       <h2>Do you want to add anything?</h2>
-      <div class="option">
-        <input type="checkbox" name="option1" id="option1" />
-        <label for="option1">beef +1,00 €</label><br />
-        <input type="checkbox" name="option2" id="option2" />
-        <label for="option2">beef +1,00 €</label><br />
-        <input type="checkbox" name="option3" id="option3" />
-        <label for="option3">beef +1,00 €</label><br />
-        <input type="checkbox" name="option4" id="option4" />
-        <label for="option4">beef +1,00 €</label><br />
-        <input type="checkbox" name="option5" id="option5" />
-        <label for="option5">beef +1,00 €</label><br />
-        <input type="checkbox" name="option6" id="option6" />
-        <label for="option6">beef +1,00 €</label><br />
-        <input type="checkbox" name="option7" id="option7" />
-        <label for="option7">beef +1,00 €</label><br />
-        <input type="checkbox" name="option8" id="option8" />
-        <label for="option8">beef +1,00 €</label><br />
-        <input type="checkbox" name="option9" id="option9" />
-        <label for="option9">beef +1,00 €</label><br />
-        <input type="checkbox" name="option10" id="option10" />
-        <label for="option10">beef +1,00 €</label><br />
+      <p>First 4 toppings are free!</p>
+      <label class="containerOption">
+        <input type="checkbox" id="option1" name="addTop" class="topOption" />beef
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+
+      <label class="containerOption">
+        <input type="checkbox" id="option2" name="addTop" class="topOption" />
+        paperoni
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+
+      <label class="containerOption">
+        <input type="checkbox" id="option3" name="addTop" class="topOption"/>
+        black olivs
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+
+      <label class="containerOption">
+        <input type="checkbox" id="option4" name="addTop" class="topOption"/>mushrooms
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <label class="containerOption">
+        <input type="checkbox" id="option5" name="addTop" class="topOption"/>ham
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <label class="containerOption">
+        <input type="checkbox" id="option6" name="addTop" class="topOption"/>hot peppers
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <label class="containerOption">
+        <input type="checkbox" id="option7" name="addTop" class="topOption" />parmesan cheese
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <label class="containerOption">
+        <input type="checkbox" id="option8" name="addTop" class="topOption"/>toasted bacon
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <label class="containerOption">
+        <input type="checkbox" id="option9" name="addTop" class="topOption"/>goat cheese
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <label class="containerOption">
+        <input type="checkbox" id="option10" name="addTop" class="topOption"/>salami
+        <span class="checkmark"></span>
+        <span>+1,00 €</span>
+      </label>
+      <h3>Choose delivery method</h3>
+      <select name="delivery" id="delivery">
+        <option value="deliveryHome" required>Delivery home, 5€</option>
+        <option value="eatHome" required>Eat in</option>
+      </div>
+      <option value="eatHome" required>Pick up food</option>
       </div>
     </div>
     <script src="main.js"></script>
