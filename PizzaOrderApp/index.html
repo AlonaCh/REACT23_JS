@@ -9,25 +9,17 @@
   <body>
     <div class="container">
       <header>
-        <h1>Home pizza house</h1>
-        <h2>Your favorite pizza is here</h2>
+        <h1>TRULY ITALLIAN</h1>
+        <h3>Your favorite pizza is here</h3>
+        <img src="pizzaImag.jpg" alt="Pizza">
+        <p id="showPrice">0,0 €</p>
       </header>
 
-      <!--Name of the customer-->
-      <div>
-        <label for="name"></label>
-        <input type="text" id="name" placeholder="What is your name?" />
-        <input type="submit" value="Submit" />
-      </div>
-      <div class="welcomeText">
-        <p></p>
-      </div>
-
-      <img src="pizzaImag.jpg" alt="Pizza" class="imageOne" />
-
+      <section class="options">
       <!--Pizza size-->
-      <h3>Choose a size</h3>
-      <form>
+      <div class="sizeSection">
+      <h3 class="size">Choose size</h3>
+      <form class="sizeInput">
         <input
           type="radio"
           name="pizza_size"
@@ -61,75 +53,77 @@
         />
         <label for="eight">Eight servings</label>
       </form>
-
+    </div>
       <!--Price-->
-      <p id="showPrice">Get the price</p>
 
-      <!--Toppings-->
-      <h2>Do you want to add anything?</h2>
-      <p>First 4 toppings are free!</p>
+      <!--Topping options-->
+      <h3>Do you want to add anything?</h3>
+      <p class="addTopping">Every topping is for 0,50 cents but first 4 are free!</p>
+      <form class="toppingOptions">
       <label class="containerOption">
         <input type="checkbox" id="option1" name="addTop" class="topOption" />beef
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
       </label>
 
       <label class="containerOption">
         <input type="checkbox" id="option2" name="addTop" class="topOption" />
         paperoni
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
       </label>
 
       <label class="containerOption">
         <input type="checkbox" id="option3" name="addTop" class="topOption"/>
         black olivs
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+       
       </label>
 
       <label class="containerOption">
         <input type="checkbox" id="option4" name="addTop" class="topOption"/>mushrooms
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+       
       </label>
       <label class="containerOption">
         <input type="checkbox" id="option5" name="addTop" class="topOption"/>ham
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+        
       </label>
       <label class="containerOption">
         <input type="checkbox" id="option6" name="addTop" class="topOption"/>hot peppers
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+        
       </label>
       <label class="containerOption">
         <input type="checkbox" id="option7" name="addTop" class="topOption" />parmesan cheese
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+       
       </label>
       <label class="containerOption">
         <input type="checkbox" id="option8" name="addTop" class="topOption"/>toasted bacon
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+        
       </label>
       <label class="containerOption">
         <input type="checkbox" id="option9" name="addTop" class="topOption"/>goat cheese
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+       
       </label>
       <label class="containerOption">
         <input type="checkbox" id="option10" name="addTop" class="topOption"/>salami
         <span class="checkmark"></span>
-        <span>+1,00 €</span>
+        
       </label>
-      <h3>Choose delivery method</h3>
-      <select name="delivery" id="delivery">
+    </form>
+
+      <!--Delivery options -->
+      <div class="delivery">
+      <h3>Choose delivery option</h3>
+      <select name="delivery" id="delivery" class="deliverySelect">
         <option value="deliveryHome" required>Delivery home, 5€</option>
         <option value="eatHome" required>Eat in</option>
-      </div>
       <option value="eatHome" required>Pick up food</option>
-      </div>
+    </div>
+      </section>
     </div>
     <script src="main.js"></script>
   </body>
