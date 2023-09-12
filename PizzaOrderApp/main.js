@@ -5,7 +5,7 @@ let pizzaToppingValue = 0;
 let pizzaDeliveryValue = 0;
 
 const pizzaSizePrices = document.querySelectorAll("input[type=radio ]");
-console.log(pizzaSizePrices);
+
 pizzaSizePrices.forEach((pizzaSize) => {
   pizzaSize.addEventListener("click", () => {
     if (pizzaSize.value === "twoServings") {

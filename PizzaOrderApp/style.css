@@ -32,12 +32,12 @@ h3 {
   border-radius: 20px;
 }
 #showPrice {
-  border: 2px solid #3d0d06;
   border-radius: 60px;
   margin: 10px auto;
   padding: 20px;
   width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color:#C1D4AF;
 }
 img {
   width: 500px;
@@ -77,6 +77,7 @@ img {
   border-radius: 7px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 8px;
+  background-color: #C1D4AF;
 }
 .deliverySelect {
   margin: 10px 5px;
