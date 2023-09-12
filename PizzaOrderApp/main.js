@@ -6,7 +6,6 @@ let pizzaDeliveryValue = 0;
 
 const pizzaSizePrices = document.querySelectorAll("input[type=radio ]");
 console.log(pizzaSizePrices);
-
 pizzaSizePrices.forEach((pizzaSize) => {
   pizzaSize.addEventListener("click", () => {
     if (pizzaSize.value === "twoServings") {
@@ -60,6 +59,7 @@ toppingsOption.forEach((topping) => {
     }
   });
 });
+
 // Delivery price
 const deliveryPrice = document.querySelector("#delivery");
 function newPizzaPrice() {
