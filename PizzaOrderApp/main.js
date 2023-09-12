@@ -73,4 +73,4 @@ function newPizzaPrice() {
       pizzaSizeValue + pizzaToppingValue + pizzaDeliveryValue + ' € ';
   }
 }
-deliveryPrice.addEventListener("click", newPizzaPrice);
+deliveryPrice.addEventListener("change", newPizzaPrice);

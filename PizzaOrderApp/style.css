@@ -31,7 +31,7 @@ h3 {
   background-color: #dde5f4;
   border-radius: 20px;
 }
-#showPrice {
+.showPrice {
   border-radius: 60px;
   margin: 10px auto;
   padding: 20px;
