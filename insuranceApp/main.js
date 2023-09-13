@@ -12,10 +12,24 @@ const calculateScore = () => {
     let habitsResult = []
 
     ages.forEach(age => {
-        if (age.checked) {
+        if (age) {
           ageResult = age.id
         }
       })
+      switch (ageResult) {
+        case 'age18_25':
+          price += 7.50;
+          break;
+        case 'size4':
+          price += 10.50;
+          break;
+        case 'size6':
+          price += 12.50;
+          break;
+        case 'size8':
+          price += 15.50;
+          break;
+      };
 
 }
 form.addEventListener('input', calculateScore)
