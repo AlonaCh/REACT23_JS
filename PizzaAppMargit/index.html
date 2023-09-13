@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=News+Cycle:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pizza</title>
+  </head>
+  <body>
+    <main>
+      <div class="left-container">
+        <div class="price">
+          <p><span id="price">7.50</span>€</p>
+        </div>
+      </div>
+      <div class="right-container">
+        <form>
+          <h1>Order</h1>
+          <p>
+            Welcome to the ultimate pizza customization app! With our simple and
+            user-friendly platform, you can create your dream pizza, just the
+            way you like it. Whether you're a pepperoni fanatic or a veggie
+            lover, the power to combine your perfect pie is now in your hands.
+            Say goodbye to menu restrictions and hello to pizza, your way!
+          </p>
+          <h2>Customer details</h2>
+          <div>
+            <label for="name">Your name</label>
+            <input type="text" id="name" />
+          </div>
+          <h2>Size</h2>
+          <div>
+            <input type="radio" id="size2" name="size" />
+            <label for="size2">for two 7.50€</label>
+          </div>
+          <div>
+            <input type="radio" id="size4" name="size" />
+            <label for="size4">for four 10.50€</label>
+          </div>
+          <div>
+            <input type="radio" id="size6" name="size" />
+            <label for="size6">for six 12.50€</label>
+          </div>
+          <div>
+            <input type="radio" id="size8" name="size" />
+            <label for="size8">for four 15.50€</label>
+          </div>
+          <h2>Toppings</h2>
+          <div>
+            <input type="checkbox" id="pepperoni" value="pepperoni" />
+            <label for="pepperoni">Pepperoni</label>
+          </div>
+          <div>
+            <input type="checkbox" id="sausage" value="sausage" />
+            <label for="sausage">Sausage</label>
+          </div>
+          <div>
+            <input type="checkbox" id="cheese" value="cheese" />
+            <label for="cheese">Cheese</label>
+          </div>
+          <div>
+            <input type="checkbox" id="chicken" value="chicken" />
+            <label for="chicken">Chicken</label>
+          </div>
+          <div>
+            <input type="checkbox" id="ham" value="ham" />
+            <label for="ham">Ham</label>
+          </div>
+          <h2>Delivery</h2>
+          <select name="deliver" id="delivery">
+            <option selected disabled value="empty">
+              Select delivery method:
+            </option>
+            <option value="home">Delivery to home</option>
+            <option value="eat in">Eat in</option>
+            <option value="pickup">Pickup food</option>
+          </select>
+        </form>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
