@@ -10,17 +10,29 @@
     <div id="container">
       <div>
         <h1>Your insurance calculator</h1>
-        <p>Please write your name</p>
+        <h4>Please write your name</h4>
+        <div id="welcomeText">
+          <p>Hello!</p>
+        </div>
       </div>
 
-      <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="clientName" />
-        </div>
+      <div class="form-group">
+        <label for="name"></label>
+        <input
+          type="text"
+          name="nameClient"
+          id="name"
+          placeholder="What is your name?"
+        />
+      </div>
 
-        <!---Number input to provide age option-->
-        <div class="form-group">
+      <!---Number input to provide age option-->
+
+      <div>
+        <label class="age" for="age"></label>
+        <input type="text" id="age" placeholder="Enter your age" />
+      </div>
+      <!--- <div class="form-group">
           <label for="age18_25">Age (18-25)</label>
 
           <input type="number" id="age18_25" name="age" min="18" max="25" />
@@ -48,9 +60,10 @@
         <div class="form-group">
           <label for="age66">Age (66+)</label>
           <input type="number" id="age66" name="age" min="66" max="150" />
-        </div>
+        </div> -->
 
-        <!---Checkbox of the health issues-->
+      <!---Checkbox of the health issues-->
+      <form>
         <p>Your current health issues</p>
         <div class="currentHealthOption">
           <input
@@ -84,20 +97,20 @@
         <p>What about your good habits?</p>
         <div class="goodHabits">
           <div>
-            <input type="checkbox" id="exercise" name="habits" class="good" />
+            <input type="checkbox" id="exercise" name="habits" class="good" value="exercise"/>
             <label for="exercise"
               >Regular exercises: engaging in physical activity and exercise on
               a regular basis.</label
             >
           </div>
           <div>
-            <input type="checkbox" id="diet" name="habits" class="good" />
+            <input type="checkbox" id="diet" name="habits" class="good" value="diet"/>
             <label for="diet"
               >Healthy diet: maintaining a balanced and nutritious diet.</label
             >
           </div>
           <div>
-            <input type="checkbox" id="nonSmoking" name="habits" class="good" />
+            <input type="checkbox" id="nonSmoking" name="habits" class="good" value="nonSmoking" />
             <label for="nonSmoking"
               >Non-Smoking: not smoking or using tobacco products.diet.</label
             >
@@ -107,30 +120,38 @@
         <div class="badHabits">
           <p>Do you have any bad habits?</p>
           <div>
-            <input type="checkbox" id="smoking" name="habits" class="bad" />
+            <input type="checkbox" id="smoking" name="habits" class="bad" value="smoking"/>
             <label for="smoking"
               >Smoking: regularly smoking cigarettes or using tobacco
               products.</label
             >
           </div>
           <div>
-            <input type="checkbox" id="poorDiet" name="habits" class="bad" />
+            <input type="checkbox" id="poorDiet" name="habits" class="bad" value="poorDiet" />
             <label for="poorDiet"
               >Poor Diet: consistently consuming unhealthy foods high in sugar,
               fats, and processed ingredients.</label
             >
           </div>
           <div>
-            <input type="checkbox" id="badExercise" name="habits" class="bad" />
+            <input type="checkbox" id="badExercise" name="habits" class="bad" value="badExercise" />
             <label for="badExercise"
               >Lack of Exercise: leading a sedentary lifestyle with little to no
               physical activity.</label
             >
           </div>
         </div>
-        <div class="riskscore">Your riskscore:</div>
+        <div id="riskscore">Your riskscore:</div>
       </form>
     </div>
+    <div class="btnResult">
+    <button type="button" onclick="ageScoreCalculation()">
+      Calculate Risk Score
+    </button>
+
+    <p class="result" id="result"></p>
+  </form>
+</div>
     <script src="main.js"></script>
   </body>
 </html>

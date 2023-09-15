@@ -1,17 +1,92 @@
-const name = document.querySelector("#clientName");
-const ages = document.querySelectorAll('input[name="age"]');
+let clientName = document.querySelector("#name").value;
+let age = parseInt(document.querySelector('#age').value);
+// ages = document.querySelector('input[name="type=naber"]')
 const healthIssues = document.querySelectorAll('input[name="health"]');
-const habits = document.querySelectorAll('input[name="habits"]');
-const riskscore = document.querySelector('#riskscore');
+// const habits = document.querySelectorAll('input[name="habits"]');
+// const riskscoreResult = document.querySelector('#riskscore');
 const baseScore = 500;
+let score = 0;
+//Score depending on the user's age (number)
+function ageScoreCalculation(){
+ 
 
-const calculateScore = () => {
+  if(age < 18){
+score = 500;
+  } else if(age >= 18 && age <=25) {
+    score *= 1.1; //18-25 -> + 10%
+  } else if(age >= 26 && age <=35) {
+    score *= 1.3; //26-35 -> + 30%
+} else if(age >= 36 && age <=45) {
+  score *= 1.6 //36-45 -> +60%
+} else if(age >= 46 && age <=55) {
+  score *= 2//46-55 -> +100%
+} else if(age >= 56 && age <=65){
+  score *= 2.5//56-65 -> +150%
+} else {
+  score += score * 2.1; //66+ -> +210%
+}
+
+// Current health issue. Each healt condition will Increase of 1% per score.
+healthIssues.forEach((issue) => {
+  if(issue.checked) {
+    score *= 1.01;
+  }
+});
+
+/*Checkboxes for Habits Options. Good habits -> Reduce 5% for every good habit.
+Bad habits -> Increase 5% for every bad habit.*/
+habits.forEach((habitUnit) =>{
+  let habitOption = delivery.options[delivery.selectedIndex].value
+  if(habitUnit.checked) {
+  if(habitUnit === 'exercise') || 
+  }
+}
+
+)
+
+
+}
+
+document.querySelector("#result").textContent =`Hello  ${clientName}! Your Risk Score is: ${Math.round(score)}`;
+
+// Client's name
+/*const welcome = () => {
+// let text = document.querySelector('#wlcomeText');
+welcomeText.textContent = //`Hello + ${clientName}, we are happy that you choose our insurance company!`//
+console.log(clientName);
+}
+clientName.addEventListener('change', welcome);*/
+/*
+// Calculates the base score according to the user's age (number)
+const calcBaseScore = (num) => {
+  let baseScore = 500;
+
+  if (num < 18) {
+    baseScore *= 1;
+  } else if (num < 26) {
+    baseScore *= 1.1;
+  } else if (num < 36) {
+    baseScore *= 1.3;
+  } else if (num < 46) {
+    baseScore *= 1.6;
+  } else if (num < 56) {
+    baseScore *= 2;
+  } else if (num < 66) {
+    baseScore *= 2.5;
+  } else {
+    baseScore *= 3.1;
+  }
+
+  return baseScore;
+}; */
+
+/*const calculateScore = () => {
    
     let ageResult = ''
     let healthIssuesResult = []
     let habitsResult = []
 
-    ages.forEach(age => {
+    ages.forEach((age) => {
         if (age) {
           ageResult = age.id
         }
@@ -32,4 +107,4 @@ const calculateScore = () => {
       };
 
 }
-form.addEventListener('input', calculateScore)
+form.addEventListener('input', calculateScore) */
