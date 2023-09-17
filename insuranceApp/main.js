@@ -1,19 +1,20 @@
-let clientName = document.querySelector("#name").value;
-let age = parseInt(document.querySelector('#age').value);
-// ages = document.querySelector('input[name="type=naber"]')
-const healthIssues = document.querySelectorAll('input[name="health"]');
-// const habits = document.querySelectorAll('input[name="habits"]');
-// const riskscoreResult = document.querySelector('#riskscore');
-const baseScore = 500;
-let score = 0;
+
 //Score depending on the user's age (number)
 function ageScoreCalculation(){
- 
+  let clientName = document.querySelector("#name").value.toUpperCase();
+  //let userName = document.getElementById("name").value;
+  let age = parseInt(document.querySelector('#age').value);
+  // ages = document.querySelector('input[name="type=naber"]')
+  const healthIssues = document.querySelectorAll('input[name="health"]');
+  const habits = document.querySelectorAll('input[name="habits"]');
+  // const riskscoreResult = document.querySelector('#riskscore');
+  let score = 500;
 
   if(age < 18){
 score = 500;
   } else if(age >= 18 && age <=25) {
-    score *= 1.1; //18-25 -> + 10%
+    //score *= 1.1; //18-25 -> + 10%
+    score += score * 0.1;
   } else if(age >= 26 && age <=35) {
     score *= 1.3; //26-35 -> + 30%
 } else if(age >= 36 && age <=45) {
@@ -32,23 +33,24 @@ healthIssues.forEach((issue) => {
     score *= 1.01;
   }
 });
-
 /*Checkboxes for Habits Options. Good habits -> Reduce 5% for every good habit.
 Bad habits -> Increase 5% for every bad habit.*/
-habits.forEach((habitUnit) =>{
-  let habitOption = delivery.options[delivery.selectedIndex].value
+/*habits.forEach((habitUnit) =>{
+  //let habitOption = delivery.options[delivery.selectedIndex].value
   if(habitUnit.checked) {
-  if(habitUnit === 'exercise') || 
+  if(checkbox.value === "exercise" || 
+  checkbox.value === "diet" ||
+  checkbox.value === "nonSmoking"
+  ) {
+    score = score - (score * 0.05) 
+  } else {
+    score = score + (score * 0.05)
   }
+  }
+  });*/
+
+document.querySelector("#output").textContent =`Hello ${clientName} ! Your Risk Score is: ${Math.round(score)}`;
 }
-
-)
-
-
-}
-
-document.querySelector("#result").textContent =`Hello  ${clientName}! Your Risk Score is: ${Math.round(score)}`;
-
 // Client's name
 /*const welcome = () => {
 // let text = document.querySelector('#wlcomeText');

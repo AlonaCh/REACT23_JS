@@ -8,6 +8,7 @@
   </head>
   <body>
     <div id="container">
+      <form>
       <div>
         <h1>Your insurance calculator</h1>
         <h4>Please write your name</h4>
@@ -63,7 +64,7 @@
         </div> -->
 
       <!---Checkbox of the health issues-->
-      <form>
+      
         <p>Your current health issues</p>
         <div class="currentHealthOption">
           <input
@@ -145,11 +146,12 @@
       </form>
     </div>
     <div class="btnResult">
-    <button type="button" onclick="ageScoreCalculation()">
-      Calculate Risk Score
+    <button type="button" onClick="ageScoreCalculation()">
+      My risk score
     </button>
-
-    <p class="result" id="result"></p>
+    <div class="result" id="output">
+    <p></p>
+  </div>
   </form>
 </div>
     <script src="main.js"></script>
