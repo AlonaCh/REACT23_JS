@@ -49,7 +49,6 @@ healthIssues.forEach((issue) => {
   }
 });
 });
-
 /*Checkboxes for Habits Options. Good habits -> Reduce 5% for every good habit. Bad habits -> Increase 5% for every bad habit.*/
 /*
 habits.forEach((habitUnit) => {
@@ -66,9 +65,11 @@ habits.forEach((habitUnit) => {
   }
   });
 */
-document.querySelector("#output").textContent =`Hello ${clientName}! According to your data your risk score is: ${Math.round(basicScore + scoreAge + scoreHealthIssues - scoreGoodHabits + scoreBadHabits)}`;
+
+let resultScore = `Hello ${clientName}! According to your data your risk score is: ${Math.round(basicScore + scoreAge + scoreHealthIssues - scoreGoodHabits + scoreBadHabits)}`;
+
+document.querySelector("#output").textContent = resultScore;
 }
 
-
-
+// variable
 
