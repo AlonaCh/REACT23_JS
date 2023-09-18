@@ -10,7 +10,7 @@ function ageScoreCalculation(){
   let scoreAge = 0;
   let scoreHealthIssues = 0;
   let scoreGoodHabits = 0;
-   let scoreBadHabits = 0;
+  let scoreBadHabits = 0;
 /*Score depending on the user's age.Below the age of 18 years = 500 */
   if(age < 18){
 let scoreAge = basicScore;
@@ -30,8 +30,7 @@ let scoreAge = basicScore;
 }
 // Current health issue. Each healt condition will Increase of 1% per score.
 healthIssues.forEach((issue) => {
-  console.log(issue);
-  issue.addEventListener("click", () => {
+  issue.addEventListener("input", () => {
     let quantityIssues = 0;
     for (let i = 0; i < healthIssues.length; i++) {
       if (healthIssues[i].checked) {
