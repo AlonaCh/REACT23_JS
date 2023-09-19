@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Insurance calculator</title>
+  </head>
+  <body>
+    <div id="container">
+      <form>
+      <div>
+        <h1>Your insurance calculator</h1>
+        <h4>Please write your name</h4>
+        <div id="welcomeText">
+          <p>Hello!</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="name"></label>
+        <input
+          type="text"
+          name="nameClient"
+          id="name"
+          placeholder="What is your name?"
+        />
+      </div>
+
+      <!---Number input to provide age option-->
+
+      <div>
+        <label class="age" for="age"></label>
+        <input type="text" id="age" placeholder="Enter your age" />
+      </div>
+
+      <!---Checkbox of the health issues-->
+      
+        <p>Your current health issues</p>
+        <div class="currentHealthOption">
+          <input
+            type="checkbox"
+            id="hypertension"
+            name="health"
+            class="healthOption"
+          />
+          <label for="hypertension"> Hypertension </label>
+        </div>
+        <div class="currentHealthOption">
+          <input
+            type="checkbox"
+            id="bloodSugar"
+            name="health"
+            class="healthOption"
+          />
+          <label for="bloodSugar">High Blood Sugar </label>
+        </div>
+        <div class="currentHealthOption">
+          <input
+            type="checkbox"
+            id="overweigth"
+            name="health"
+            class="healthOption"
+          />
+          <label for="overweigth">Overweight </label>
+        </div>
+
+        <!--Checkboxes for Habits Options-->
+        <p>What about your good habits?</p>
+        <div class="goodHabits">
+          <div>
+            <input type="checkbox" id="exercise" name="good_habits" class="good" value="exercise"/>
+            <label for="exercise"
+              >Regular exercises: engaging in physical activity and exercise on
+              a regular basis.</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="diet" name="good_habits" class="good" value="diet"/>
+            <label for="diet"
+              >Healthy diet: maintaining a balanced and nutritious diet.</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="nonSmoking" name="good_habits" class="good" value="nonSmoking" />
+            <label for="nonSmoking"
+              >Non-Smoking: not smoking or using tobacco products.diet.</label
+            >
+          </div>
+        </div>
+
+        <div class="badHabits">
+          <p>Do you have any bad habits?</p>
+          <div>
+            <input type="checkbox" id="smoking" name="bad_habits" class="bad" value="smoking"/>
+            <label for="smoking"
+              >Smoking: regularly smoking cigarettes or using tobacco
+              products.</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="poorDiet" name="bad_habits" class="bad" value="poorDiet" />
+            <label for="poorDiet"
+              >Poor Diet: consistently consuming unhealthy foods high in sugar,
+              fats, and processed ingredients.</label
+            >
+          </div>
+          <div>
+            <input type="checkbox" id="badExercise" name="bad_habits" class="bad" value="badExercise" />
+            <label for="badExercise"
+              >Lack of Exercise: leading a sedentary lifestyle with little to no
+              physical activity.</label
+            >
+          </div>
+        </div>
+        <div id="riskscore">Your riskscore:</div>
+      </form>
+    </div>
+    <div class="btnResult">
+    <button type="button" onClick="ageScoreCalculation()">
+      My risk score
+    </button>
+    <div class="result" id="output">
+    <p></p>
+  </div>
+  </form>
+</div>
+    <script src="main.js"></script>
+  </body>
+</html>
