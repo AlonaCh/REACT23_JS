@@ -15,7 +15,7 @@ function ageScoreCalculation() {
   /*Score depending on the user's age.Below the age of 18 years = 500 */
   
   if (age < 18) {
-    let scoreAge = basicScore;
+  scoreAge = 0;
   } else if (age >= 18 && age <= 25) {
     //18-25 -> + 10%
     scoreAge = basicScore * 0.1;
@@ -69,30 +69,32 @@ function ageScoreCalculation() {
   const calculateGoodHabits = (amountOfGoodHabits, persentageGhabits) => {
     switch (amountOfGoodHabits) {
       case 1:
-        return 1 * (basicScore - (basicScore * persentageGhabits));
+        return 1 *  (basicScore * persentageGhabits);
         break;
         case 2:
-          return 2 * (basicScore - (basicScore * persentageGhabits));
+          return 2 *  (basicScore * persentageGhabits);
         break;
         case 3:
-          return 3 * (basicScore - (basicScore * persentageGhabits));
+          return 3 * (basicScore * persentageGhabits);
         break;
         default:
-        break;
+        return 0;
     }
   }
 // Calc bad habits
 const calculateBadHabits = (amountOfBadHabits, persentageBhabits) => {
 switch (amountOfBadHabits) {
   case 1:
-    return basicScore + (basicScore * persentageBhabits);
+    return (basicScore * persentageBhabits);
     break;
     case 2:
-    return 2 * (basicScore + (basicScore * persentageBhabits));
+    return 2 * (basicScore * persentageBhabits);
     break;
     case 3:
-    return 3 * (basicScore + (basicScore * persentageBhabits));
+    return 3 * (basicScore * persentageBhabits);
     break;
+    default:
+      return 0;
 }
 }
   let scoreHealthIssues = calculateIssues(amountHealthIssues, 0.1);
@@ -126,7 +128,6 @@ document.querySelector("#output").textContent = `Hello ${clientName}! According 
     });
   }); */
   
-
 /*Checkboxes for Habits Options. Good habits -> Reduce 5% for every good habit. Bad habits -> Increase 5% for every bad habit.*/
 /*
 habits.forEach((habitUnit) => {

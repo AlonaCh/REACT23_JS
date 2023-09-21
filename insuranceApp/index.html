@@ -9,33 +9,28 @@
   <body>
     <div id="container">
       <form>
-      <div>
-        <h1>Your insurance calculator</h1>
-        <h4>Please write your name</h4>
-        <div id="welcomeText">
-          <p>Hello!</p>
-        </div>
-      </div>
-
-      <div class="form-group">
+        <h1>Calculate the price of your insurance policy</h1>
+        <div class="information">
+        <h4 class="enter">Enter your information</h4>
+      <div class="name">
         <label for="name"></label>
         <input
           type="text"
           name="nameClient"
           id="name"
           placeholder="What is your name?"
+          class="inputName"
+          autocomplete="off"
         />
       </div>
-
       <!---Number input to provide age option-->
-
-      <div>
+      <div class="age">
         <label class="age" for="age"></label>
-        <input type="text" id="age" placeholder="Enter your age" />
+        <input type="text" id="age" placeholder="Enter your age" class="inputAge" autocomplete="off"/>
       </div>
-
+    </div>
       <!---Checkbox of the health issues-->
-      
+      <div class="healthCheckbox">
         <p>Your current health issues</p>
         <div class="currentHealthOption">
           <input
@@ -118,12 +113,14 @@
     </div>
     <div class="btnResult">
     <button type="button" onClick="ageScoreCalculation()">
-      My risk score
+      Check the price
     </button>
     <div class="result" id="output">
     <p></p>
   </div>
   </form>
+</div>
+</div>
 </div>
     <script src="main.js"></script>
   </body>
