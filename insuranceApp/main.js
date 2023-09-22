@@ -8,12 +8,12 @@ function ageScoreCalculation() {
   
   let basicScore = 500;
   let scoreAge = 0;
+
   let amountHealthIssues=0;
   let amountGoodHabits=0;
   let amountBadHabits=0;
 
   /*Score depending on the user's age.Below the age of 18 years = 500 */
-  
   if (age < 18) {
   scoreAge = 0;
   } else if (age >= 18 && age <= 25) {
@@ -27,8 +27,10 @@ function ageScoreCalculation() {
     scoreAge = basicScore * 1; //46-55 -> +100%
   } else if (age >= 56 && age <= 65) {
     scoreAge = basicScore * 1.5; //56-65 -> +150%
-  } else {
+  } else if (age >= 66){
     scoreAge = basicScore * 2.1; //66+ -> +210%
+  } else {
+    scoreAge = 0;
   }
   console.log(scoreAge);
   // Current health issue. Each health condition will Increase of 1% per score.
@@ -62,7 +64,7 @@ function ageScoreCalculation() {
         return 3 * (basicScore * persentage);
         break;
       default:
-        break;
+        return 0;
     } 
   } 
   // calc good first and then pass as persentage 
@@ -104,45 +106,6 @@ switch (amountOfBadHabits) {
 console.log(scoreHealthIssues, scoreGoodHabits, scoreBadHabits);
 
 let totalScore = basicScore + scoreAge + scoreHealthIssues + scoreBadHabits - scoreGoodHabits;
-document.querySelector("#output").textContent = `Hello ${clientName}! According to your data your risk score is: ${totalScore}`;
+document.querySelector("#output").textContent = `Hello ${clientName}! According to your data your risk score is: ${totalScore} €`;
 }
-//-----
 
-/*   healthIssues.forEach((issue) => {
-    issue.addEventListener("input", () => {
-      let quantityIssues = 0;
-      for (let i = 0; i < healthIssues.length; i++) {
-        if (healthIssues[i].checked) {
-          quantityIssues++;
-        }
-      }
-      if (quantityIssues === 1) {
-        scoreHealthIssues = 1 * (basicScore * 0.01);
-      } else if (quantityIssues === 2) {
-        scoreHealthIssues = 2 * (basicScore * 0.01);
-      } else if (quantityIssues === 3) {
-        scoreHealthIssues = 3 * (basicScore * 0.01);
-      } else {
-        scoreHealthIssues = 0;
-      }
-    });
-  }); */
-  
-/*Checkboxes for Habits Options. Good habits -> Reduce 5% for every good habit. Bad habits -> Increase 5% for every bad habit.*/
-/*
-habits.forEach((habitUnit) => {
-  //let habitOption = delivery.options[delivery.selectedIndex].value
-  if(habitUnit.checked) {
-  if(habitUnit.value === "exercise" || 
-  habitUnit.value === "diet" ||
-  habitUnit.value === "nonSmoking"
-  ) {
-    score *= 0.95 //score = score - (score * 0.05) 
-  } else {
-    score *= 1.05 //score = score + (score * 0.05)
-  }
-  }
-  });
-*/
-
-// variable
