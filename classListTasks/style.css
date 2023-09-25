@@ -17,12 +17,19 @@ footer,
 header {
     padding: 1rem;
 }
+section {
+    scroll-margin-top: 60px;
+}
 header {
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
-    position: relative;
+}
+.bg {
+    background-color: white;
 }
 li{
     display: inline-block;
@@ -54,6 +61,36 @@ bottom: 2rem;
 right: 2rem;
 display: none;
 }
+
+.overlay {
+    display: none; 
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* view port high */
+    background-color: rgba(51, 51, 51, 0.8); /* Fallback color */
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay.visible {
+    display: flex;
+  }
+  .modal {
+    background-color: white;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
 /*if it is smaller then 800px make pink */
 @media (max-width: 800px){
 body {
@@ -86,3 +123,7 @@ display: none;
         margin: 1rem;
     }
 }
+
+
+
+  
